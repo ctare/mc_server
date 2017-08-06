@@ -2,4 +2,3 @@ logs/*
 world/*
 mods/mod_list.json
 usercache.json
-server.properties
