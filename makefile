@@ -1,2 +1,2 @@
 b:
-	java -Xms1024M -Xmx1024M -jar forge-1.8.9-11.15.1.2318-1.8.9-universal.jar nogui
+	java -Xms1024M -Xmx1024M -jar forge-1.7.10-10.13.4.1614-1.7.10-universal.jar nogui
