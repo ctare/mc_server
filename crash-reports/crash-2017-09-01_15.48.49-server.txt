@@ -1,0 +1,93 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 17/09/01 15:48
+Description: Exception in server tick loop
+
+java.lang.IllegalArgumentException: Duplicate enchantment id! class ganymedes01.ganysend.enchantment.ImperviousnessEnchantment and class am2.enchantments.EnchantMagicResist Enchantment ID:100
+	at net.minecraft.enchantment.Enchantment.<init>(Enchantment.java:53)
+	at ganymedes01.ganysend.enchantment.ImperviousnessEnchantment.<init>(ImperviousnessEnchantment.java:20)
+	at ganymedes01.ganysend.enchantment.ModEnchants.init(ModEnchants.java:19)
+	at ganymedes01.ganysend.GanysEnd.preInit(GanysEnd.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:88)
+	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:314)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:117)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:387)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.12.5
+	Java Version: 1.8.0_131, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 767714768 bytes (732 MB) / 1012400128 bytes (965 MB) up to 1012400128 bytes (965 MB)
+	JVM Flags: 2 total; -Xms1024M -Xmx1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 31 mods loaded, 31 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCH	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCH	AM2-Preloader{0.0.3} [AMCore] (minecraft.jar) 
+	UCH	mod_ThreadedLighting{1.7.10-1.0} [Threaded Lighting] (minecraft.jar) 
+	UCH	FastCraft{1.23} [FastCraft] (fastcraft-1.23.jar) 
+	UCH	gilded-games-util{1.7.10-1.2} [Gilded Games Utility] (gilded-games-util-1.7.10-1.9.jar) 
+	UCH	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10-1.2.4.jar) 
+	UCH	arsmagica2{1.4.0.009} [Ars Magica 2] (1.7.10_AM2-1.4.0.009.jar) 
+	UCH	BuildCraft|Core{7.1.22} [BuildCraft] (buildcraft-7.1.22.jar) 
+	UCH	BuildCraft|Transport{7.1.22} [BC Transport] (buildcraft-7.1.22.jar) 
+	UCH	BuildCraft|Factory{7.1.22} [BC Factory] (buildcraft-7.1.22.jar) 
+	UCH	BuildCraft|Silicon{7.1.22} [BC Silicon] (buildcraft-7.1.22.jar) 
+	UCH	BuildCraft|Robotics{7.1.22} [BC Robotics] (buildcraft-7.1.22.jar) 
+	UCH	BuildCraft|Energy{7.1.22} [BC Energy] (buildcraft-7.1.22.jar) 
+	UCH	BuildCraft|Builders{7.1.22} [BC Builders] (buildcraft-7.1.22.jar) 
+	UCH	craftguide{1.7.1.0} [CraftGuide] (CraftGuide-1.7.1.0-forge.jar) 
+	UCE	ganysend{1.11.3} [Gany's End] (Ganys End-1.11.3.jar) 
+	UCH	ganysnether{1.8.3} [Gany's Nether] (Ganys Nether-1.8.3.jar) 
+	UCH	ganyssurface{1.12.8} [Gany's Surface] (Ganys Surface-1.12.8.jar) 
+	UCH	HardcoreEnderExpansion{1.8.6} [Hardcore Ender Expansion] (HardcoreEnderExpansion  MC-1.7.10  v1.8.6.jar) 
+	UCH	IC2{2.2.828-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.828-experimental.jar) 
+	UCH	inventorytweaks{1.59-dev-152-cf6e263} [Inventory Tweaks] (InventoryTweaks-1.59-dev-152.jar) 
+	UCH	LogisticsPipes{0.9.3.132} [Logistics Pipes] (logisticspipes-0.9.3.132.jar) 
+	UCH	net.minecraft.scalar.cutall.mod_CutAllSMP{2.5.0} [CutAllSMP] (mod_CutAllSMP_v2.5.0.zip) 
+	UCH	net.minecraft.scalar.mineall.mod_MineAllSMP{2.6.1} [MineAllSMP] (mod_MineAllSMP_v2.6.1.zip) 
+	UCH	net.minecraft.rosettaenchanttable{0.0.5} [Rosetta Enchant Table] (mod_RosettaEnchantTable_v0.0.5.zip) 
+	UCH	net.minecraft.storagebox.mod_StorageBox{3.0.5} [StorageBox] (mod_StorageBox_v3.0.5.zip) 
+	UCH	MutantCreatures{1.4.9} [Mutant Creatures] (MutantCreatures-1.7.10-1.4.9.jar) 
+	UCH	spawnchecker{2.1.4.128} [SpawnChecker] (SpawnChecker-2.1.4.128.jar) 
+	UCH	spawnchecker.presetmode{2.1.4.128} [SpawnChecker preset mode] (SpawnChecker-2.1.4.128.jar) 
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
