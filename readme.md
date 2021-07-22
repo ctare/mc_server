@@ -9,3 +9,6 @@ install方法
 
 server
 nohup make &
+
+server kill
+pkill -9 java
