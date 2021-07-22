@@ -5,3 +5,7 @@ install方法
 	サーバーの実行　多分色々ディレクトリができる
 4. java -jar forge-1.12.2-14.23.5.2847-installer.jar --installServer
 	インストール　何か入る
+
+
+server
+nohup make &
